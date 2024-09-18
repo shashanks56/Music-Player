@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Artist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.jfif" alt="Emusic">Emusic</li>
+            <!-- <li>Home</li> -->
+            <li><p><a href="index.html">Home</a></p></li>
+            <li><p><a href="about.html">About</a></p></li>
+            <div class="search-container">
+                <form id="searchForm" action="/search" method="GET">
+                    <input type="text" name="q" class="search-box" placeholder="Search..." onkeydown="if (event.keyCode === 13) document.getElementById('searchForm').submit()">
+                </form>
+            </div>
+            <li><p><a href="login.html">LogIn</a></p></li>
+            <li><p><a href="signup.html">SignUp</a></p></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        
+        <ul class="sidebar-menu">
+            <h3><li>Browse</li></h3>
+        
+            <li><a href="artist.html">Top Artist</a></li>
+            <li><a href="playlist.html">Top Songs</a></li>
+            <li><a href="index.html">Top Trending</a></li>
+            <li><a href="playlist.html">International</a></li>
+        
+        </ul>
+        <div class="playlist">
+            <h3>Your Playlist</h3>
+            <ul>
+                <li><a href="index.html">Playlist 1</a></li>
+                <li><a href="#">Playlist 2</a></li>
+                <li><a href="#">Playlist 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="container1-image-container" onclick="openNewPage('index.html')">
+            <img src="singerimg/arijit.jpg" alt="Image 1">
+            <figcaption>Arijit Singh</figcaption>
+        </div>
+        <div class="container1-image-container" onclick="openNewPage('index.html')">
+            <img src="singerimg/lata didi.jpg" alt="Image 2">
+            <figcaption>Lata Mangeshkar</figcaption>
+        </div>
+        <div class="container1-image-container" onclick="openNewPage('index.html')">
+            <img src="singerimg/shreyaghosal.jpg" alt="Image 3">
+            <figcaption>Shreya Ghosal</figcaption>
+        </div>
+        <div class="container1-image-container" onclick="openNewPage('index.html')">
+            <img src="singerimg/sonunigam.jfif" alt="Image 4">
+            <figcaption>Sonu Nigam</figcaption>
+        </div>
+        <div class="container1-image-container" onclick="openNewPage('index.html')">
+            <img src="singerimg/kishore.png" alt="Image 5">
+            <figcaption>Kishore Kumar</figcaption>
+        </div>
+        </div>
+
+        <div class="bottom">
+            <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+            <div class="icons">
+                <!--fontawesome icons-->
+                <i class="fa-3x fa-solid fa-backward-step" id="previous"></i>
+                <i class="fa-3x fa-solid fa-circle-play" id="masterPlay"></i>
+                <i class="fa-3x fa-solid fa-forward-step" id="next"></i>
+            </div>
+            <div class="songinfo">
+                <img src="gif.gif" width="48px" id="gif"><span id="masterSongName"></span>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/9f7c3712d6.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+</html>
